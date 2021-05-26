@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Class Temperature</title>
+</head>
+<body>
+<script>
+  class temperature {
+    constructor(celsius) {
+      this.celsius = celsius
+    }
+    getCelsius(celsius){
+        this.celsius = celsius
+        return celsius;
+    }
+    getFdegree(celsius) {
+        return celsius*1.8 + 32
+    }
+      getKdegree(celsius) {
+          return celsius + 273.15
+      }
+  }
+   temperature = new temperature(25)
+  let F = temperature.getFdegree(25);
+  let K = temperature.getKdegree(25);
+  alert('F degree: ' + F + '; K degree: ' + K)
+</script>
+</body>
+</html>
