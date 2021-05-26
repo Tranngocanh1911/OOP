@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>switch and lamp</title>
+</head>
+<body>
+<script>
+  class Battery  {
+      constructor(energy) {
+          this.energy = energy;
+      }
+      getEnergy () {
+          return this.energy;
+      };
+      decreaseEnergy () {
+          if (this.energy > 0) {
+              this.energy--;
+          }
+      }
+  }
+  class FlashLamp  {
+      constructor(status, battery) {
+          this.battery = battery
+      }
+      setBattery (batterry)  {
+          this.battery = battery
+      }
+      getBatteryInfo () {
+          return this.battery;
+      };
+      getlight () {
+          if(this.status) {
+              alert('Lightning');
+          } else  {
+              alert('Not lightning')
+          }
+      };
+      turnOn = function () {
+          this.status = true
+          battery.decreaseEnergy()
+      };
+      turnOff = function () {
+          this.status = false
+      }
+  }
+  let battery = new Battery(10);
+  let flashlamp = new FlashLamp()
+  flashlamp.setBattery(battery)
+  document.write('Before turn on: ' + JSON.stringify(flashlamp.getBatteryInfo()) +'<br/>')
+      flashlamp.turnOn();
+  document.write('After turn on: ' + JSON.stringify(flashlamp.getBatteryInfo()))
+      flashlamp.getlight();
+      flashlamp.turnOff();
+      flashlamp.getlight();
+
+
+
+
+
+</script>
+</body>
+</html>
